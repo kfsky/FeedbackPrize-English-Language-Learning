@@ -1,0 +1,37 @@
+Downloading tokenizer_config.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 52.0/52.0 [00:00<00:00, 58.7kB/s]
+Downloading config.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 579/579 [00:00<00:00, 667kB/s]
+Downloading spm.model: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.35M/2.35M [00:00<00:00, 62.7MB/s]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3911/3911 [00:04<00:00, 959.15it/s]
+[2022-10-31 09:01:18] - max_len: 2048
+[2022-10-31 09:01:18] - ========== fold: 0 training ==========
+
+Downloading pytorch_model.bin: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 354M/354M [00:03<00:00, 101MB/s]
+Some weights of the model checkpoint at microsoft/deberta-v3-base were not used when initializing DebertaV2Model: ['mask_predictions.classifier.weight', 'lm_predictions.lm_head.LayerNorm.weight', 'lm_predictions.lm_head.dense.bias', 'mask_predictions.dense.weight', 'mask_predictions.LayerNorm.bias', 'mask_predictions.classifier.bias', 'lm_predictions.lm_head.LayerNorm.bias', 'mask_predictions.dense.bias', 'lm_predictions.lm_head.bias', 'lm_predictions.lm_head.dense.weight', 'mask_predictions.LayerNorm.weight']
+- This IS expected if you are initializing DebertaV2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Traceback (most recent call last):
+  File "/notebooks/code/exp037.py", line 771, in <module>
+    main()
+  File "/notebooks/code/exp037.py", line 709, in main
+    _oof_df = train_loop(train, fold)
+  File "/notebooks/code/exp037.py", line 621, in train_loop
+    avg_loss = train_fn(fold, train_loader, model, criterion, optimizer, epoch, scheduler, device)
+  File "/notebooks/code/exp037.py", line 472, in train_fn
+    y_preds = model(inputs)
+  File "/usr/local/lib/python3.9/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/notebooks/code/exp037.py", line 398, in forward
+    output = self.feature(inputs)
+  File "/notebooks/code/exp037.py", line 389, in feature
+    cnn_embeddings = F.relu(self.cnn1(last_hidden_state))
+  File "/usr/local/lib/python3.9/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/torch/nn/modules/conv.py", line 307, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/usr/local/lib/python3.9/dist-packages/torch/nn/modules/conv.py", line 303, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+RuntimeError: Given groups=1, weight of size [256, 1024, 2], expected input[16, 768, 870] to have 1024 channels, but got 768 channels instead
+Last Hidden State Output Shape: torch.Size([16, 768, 870])

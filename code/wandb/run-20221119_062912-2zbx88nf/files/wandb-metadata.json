@@ -1,0 +1,105 @@
+{
+    "os": "Linux-5.4.0-122-generic-x86_64-with-glibc2.31",
+    "python": "3.9.13",
+    "heartbeatAt": "2022-11-19T06:29:13.218176",
+    "startedAt": "2022-11-19T06:29:12.798934",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/notebooks/FeedbackPrize-English-Language-Learning/code/exp059.py",
+    "codePath": "code/exp059.py",
+    "git": {
+        "remote": "https://github.com/kfsky/FeedbackPrize-English-Language-Learning.git",
+        "commit": "d8386294c50c2b8d846ace5ff70e1ef33cf8fbce"
+    },
+    "email": null,
+    "root": "/notebooks/FeedbackPrize-English-Language-Learning",
+    "host": "nnd36928zr",
+    "username": "root",
+    "executable": "/usr/local/bin/python",
+    "cpu_count": 12,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 2999.8810000000008,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2999.881,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2999.881,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2999.881,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2999.881,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2999.881,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2999.881,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2999.881,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2999.881,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2999.881,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2999.881,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2999.881,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2999.881,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 245.95343399047852,
+        "used": 127.8319320678711
+    },
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA A100-SXM4-80GB",
+            "memory_total": 85899345920
+        }
+    ],
+    "memory": {
+        "total": 88.39791107177734
+    }
+}

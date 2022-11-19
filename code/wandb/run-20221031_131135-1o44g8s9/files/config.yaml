@@ -1,0 +1,173 @@
+wandb_version: 1
+
+T_max:
+  desc: null
+  value: 50
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.4
+    framework: huggingface
+    huggingface_version: 4.21.1
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.9.13
+    start_time: 1667221895.286425
+    t:
+      1:
+      - 1
+      - 2
+      - 3
+      - 5
+      - 11
+      - 12
+      - 49
+      - 53
+      - 55
+      2:
+      - 1
+      - 2
+      - 3
+      - 5
+      - 11
+      - 12
+      - 49
+      - 53
+      - 55
+      3:
+      - 2
+      - 13
+      - 16
+      - 23
+      4: 3.9.13
+      5: 0.13.4
+      6: 4.21.1
+      8:
+      - 5
+_wandb_kernel:
+  desc: null
+  value: kfksy
+apex:
+  desc: null
+  value: true
+batch_scheduler:
+  desc: null
+  value: true
+batch_size:
+  desc: null
+  value: 8
+betas:
+  desc: null
+  value:
+  - 0.9
+  - 0.999
+competition:
+  desc: null
+  value: FB3
+debug:
+  desc: null
+  value: false
+decoder_lr:
+  desc: null
+  value: 2.0e-06
+encoder_lr:
+  desc: null
+  value: 2.0e-06
+epochs:
+  desc: null
+  value: 5
+eps:
+  desc: null
+  value: 1.0e-07
+explain:
+  desc: null
+  value: deberta-v2-xlarge
+fc_dropout:
+  desc: null
+  value: 0.2
+gradient_accumulation_steps:
+  desc: null
+  value: 1
+gradient_checkpointing:
+  desc: null
+  value: true
+max_grad_norm:
+  desc: null
+  value: 1000
+max_len:
+  desc: null
+  value: 2048
+min_lr:
+  desc: null
+  value: 1.0e-07
+model:
+  desc: null
+  value: microsoft/deberta-v2-xlarge
+n_fold:
+  desc: null
+  value: 5
+name:
+  desc: null
+  value: exp038
+notion_api:
+  desc: null
+  value: secret_mDRpQpcMtlPJiaLh4jG7MHDzJK6iAAjQixkEwVwK3yC
+num_cycle:
+  desc: null
+  value: 0.5
+num_warmup_steps:
+  desc: null
+  value: 100
+num_workers:
+  desc: null
+  value: 4
+print_freq:
+  desc: null
+  value: 100
+reinit_layers:
+  desc: null
+  value: 0
+scheduler:
+  desc: null
+  value: CosineAnnealingLR
+seed:
+  desc: null
+  value: 42
+send_notion:
+  desc: null
+  value: true
+send_slack:
+  desc: null
+  value: false
+target_cols:
+  desc: null
+  value:
+  - cohesion
+  - syntax
+  - vocabulary
+  - phraseology
+  - grammar
+  - conventions
+train:
+  desc: null
+  value: true
+trn_fold:
+  desc: null
+  value:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+upload_from_colab:
+  desc: null
+  value: true
+wandb:
+  desc: null
+  value: true
+wandb_key:
+  desc: null
+  value: 7d32464324b52091573d018d1166ff4c35d3897b
+weight_decay:
+  desc: null
+  value: 0.01

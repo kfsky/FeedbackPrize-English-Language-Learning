@@ -1,0 +1,467 @@
+Downloading tokenizer_config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 52.0/52.0 [00:00<00:00, 88.1kB/s]
+Downloading config.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 579/579 [00:00<00:00, 868kB/s]
+Downloading spm.model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.35M/2.35M [00:00<00:00, 54.5MB/s]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3911/3911 [00:03<00:00, 1017.35it/s]
+[2022-11-02 04:38:58] - max_len: 2048
+[2022-11-02 04:38:58] - ========== fold: 0 training ==========
+[2022-11-02 04:38:58] - DebertaV2Config {
+  "_name_or_path": "microsoft/deberta-v3-base",
+  "attention_dropout": 0.0,
+  "attention_probs_dropout_prob": 0.0,
+  "hidden_act": "gelu",
+  "hidden_dropout": 0.0,
+  "hidden_dropout_prob": 0.0,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-07,
+  "max_position_embeddings": 512,
+  "max_relative_positions": -1,
+  "model_type": "deberta-v2",
+  "norm_rel_ebd": "layer_norm",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_hidden_states": true,
+  "pad_token_id": 0,
+  "pooler_dropout": 0,
+  "pooler_hidden_act": "gelu",
+  "pooler_hidden_size": 768,
+  "pos_att_type": [
+    "p2c",
+    "c2p"
+  ],
+  "position_biased_input": false,
+  "position_buckets": 256,
+  "relative_attention": true,
+  "share_att_key": true,
+  "transformers_version": "4.21.1",
+  "type_vocab_size": 0,
+  "vocab_size": 128100
+}
+
+Downloading pytorch_model.bin: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 354M/354M [00:03<00:00, 108MB/s]
+Some weights of the model checkpoint at microsoft/deberta-v3-base were not used when initializing DebertaV2Model: ['lm_predictions.lm_head.bias', 'mask_predictions.dense.bias', 'lm_predictions.lm_head.LayerNorm.bias', 'lm_predictions.lm_head.dense.weight', 'mask_predictions.LayerNorm.bias', 'mask_predictions.classifier.bias', 'lm_predictions.lm_head.dense.bias', 'mask_predictions.classifier.weight', 'mask_predictions.dense.weight', 'lm_predictions.lm_head.LayerNorm.weight', 'mask_predictions.LayerNorm.weight']
+- This IS expected if you are initializing DebertaV2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Reinitializing Last 1 Layers ...
+Done.!
+Epoch: [1][0/391] Elapsed 0m 1s (remain 10m 14s) Loss: 2.1984(2.1984) Grad: inf  LR: 0.00002994
+Epoch: [1][100/391] Elapsed 0m 55s (remain 2m 39s) Loss: 0.1706(0.2889) Grad: 160813.8594  LR: 0.00002994
+Epoch: [1][200/391] Elapsed 1m 45s (remain 1m 40s) Loss: 0.1190(0.2127) Grad: 168293.7969  LR: 0.00002994
+Epoch: [1][300/391] Elapsed 2m 43s (remain 0m 48s) Loss: 0.1366(0.1812) Grad: 128123.2734  LR: 0.00002994
+Epoch: [1][390/391] Elapsed 3m 33s (remain 0m 0s) Loss: 0.2097(0.1663) Grad: 144870.5312  LR: 0.00002821
+EVAL: [0/49] Elapsed 0m 0s (remain 0m 33s) Loss: 0.1498(0.1498)
+EVAL: [48/49] Elapsed 0m 31s (remain 0m 0s) Loss: 0.1279(0.1306)
+[2022-11-02 04:43:11] - Epoch 1 - avg_train_loss: 0.1663  avg_val_loss: 0.1306  time: 245s
+[2022-11-02 04:43:11] - Epoch 1 - Score: 0.5098  Scores: [0.5950244032537236, 0.4658577168578638, 0.4344532862409186, 0.5207149073238345, 0.5850511195451278, 0.4578162034654157]
+[2022-11-02 04:43:11] - Epoch 1 - Save Best Score: 0.5098 Model
+Epoch: [2][0/391] Elapsed 0m 0s (remain 6m 1s) Loss: 0.2679(0.2679) Grad: 304911.1562  LR: 0.00002864
+Epoch: [2][100/391] Elapsed 0m 54s (remain 2m 35s) Loss: 0.0802(0.1091) Grad: 143390.6250  LR: 0.00002864
+Epoch: [2][200/391] Elapsed 1m 46s (remain 1m 40s) Loss: 0.0800(0.1087) Grad: 171888.5938  LR: 0.00002864
+Epoch: [2][300/391] Elapsed 2m 41s (remain 0m 48s) Loss: 0.0953(0.1088) Grad: 161910.0781  LR: 0.00002864
+Epoch: [2][390/391] Elapsed 3m 29s (remain 0m 0s) Loss: 0.1124(0.1072) Grad: 241355.4375  LR: 0.00002231
+EVAL: [0/49] Elapsed 0m 0s (remain 0m 32s) Loss: 0.1228(0.1228)
+EVAL: [48/49] Elapsed 0m 31s (remain 0m 0s) Loss: 0.1090(0.1082)
+[2022-11-02 04:47:13] - Epoch 2 - avg_train_loss: 0.1072  avg_val_loss: 0.1082  time: 241s
+[2022-11-02 04:47:13] - Epoch 2 - Score: 0.4657  Scores: [0.49648165914283376, 0.4719324029439075, 0.4230339521653089, 0.47640106018313194, 0.4737034625676598, 0.4526770662034206]
+[2022-11-02 04:47:13] - Epoch 2 - Save Best Score: 0.4657 Model
+Epoch: [3][0/391] Elapsed 0m 0s (remain 5m 26s) Loss: 0.1021(0.1021) Grad: 349476.1250  LR: 0.00002312
+Epoch: [3][100/391] Elapsed 0m 57s (remain 2m 44s) Loss: 0.1271(0.1026) Grad: 479881.6250  LR: 0.00002312
+Epoch: [3][200/391] Elapsed 1m 53s (remain 1m 46s) Loss: 0.0861(0.0991) Grad: 119146.2031  LR: 0.00002312
+Epoch: [3][300/391] Elapsed 2m 46s (remain 0m 49s) Loss: 0.0725(0.1005) Grad: 187883.0781  LR: 0.00002312
+Epoch: [3][390/391] Elapsed 3m 37s (remain 0m 0s) Loss: 0.1291(0.1020) Grad: 334873.5000  LR: 0.00001417
+EVAL: [0/49] Elapsed 0m 0s (remain 0m 32s) Loss: 0.1087(0.1087)
+EVAL: [48/49] Elapsed 0m 31s (remain 0m 0s) Loss: 0.0989(0.1064)
+[2022-11-02 04:51:23] - Epoch 3 - avg_train_loss: 0.1020  avg_val_loss: 0.1064  time: 249s
+[2022-11-02 04:51:23] - Epoch 3 - Score: 0.4615  Scores: [0.49309162894731356, 0.46061169152065434, 0.41488250078953726, 0.4771585692590182, 0.4641072911897451, 0.4589147013380005]
+[2022-11-02 04:51:23] - Epoch 3 - Save Best Score: 0.4615 Model
+Epoch: [4][0/391] Elapsed 0m 1s (remain 7m 58s) Loss: 0.1055(0.1055) Grad: 287283.3750  LR: 0.00001511
+Epoch: [4][100/391] Elapsed 0m 56s (remain 2m 41s) Loss: 0.0806(0.0969) Grad: 269857.9062  LR: 0.00001511
+Epoch: [4][200/391] Elapsed 1m 51s (remain 1m 45s) Loss: 0.0811(0.0979) Grad: 115797.4922  LR: 0.00001511
+Epoch: [4][300/391] Elapsed 2m 45s (remain 0m 49s) Loss: 0.0774(0.0969) Grad: 125049.0938  LR: 0.00001511
+Epoch: [4][390/391] Elapsed 3m 33s (remain 0m 0s) Loss: 0.0638(0.0980) Grad: 147581.7031  LR: 0.00000633
+EVAL: [0/49] Elapsed 0m 0s (remain 0m 33s) Loss: 0.1247(0.1247)
+EVAL: [48/49] Elapsed 0m 31s (remain 0m 0s) Loss: 0.1056(0.1121)
+[2022-11-02 04:55:30] - Epoch 4 - avg_train_loss: 0.0980  avg_val_loss: 0.1121  time: 245s
+[2022-11-02 04:55:30] - Epoch 4 - Score: 0.4741  Scores: [0.506511139785724, 0.4827328473276213, 0.42350854558864776, 0.47860881926348914, 0.499642288934313, 0.4535603515211437]
+Epoch: [5][0/391] Elapsed 0m 0s (remain 3m 40s) Loss: 0.0759(0.0759) Grad: 186936.0938  LR: 0.00000711
+Epoch: [5][100/391] Elapsed 0m 57s (remain 2m 43s) Loss: 0.0695(0.0925) Grad: 80587.1875  LR: 0.00000711
+Epoch: [5][200/391] Elapsed 1m 53s (remain 1m 47s) Loss: 0.0777(0.0929) Grad: 144311.6250  LR: 0.00000711
+Epoch: [5][300/391] Elapsed 2m 47s (remain 0m 50s) Loss: 0.1251(0.0927) Grad: 204009.3594  LR: 0.00000711
+Epoch: [5][390/391] Elapsed 3m 37s (remain 0m 0s) Loss: 0.0536(0.0933) Grad: 73562.5078  LR: 0.00000124
+EVAL: [0/49] Elapsed 0m 0s (remain 0m 34s) Loss: 0.1184(0.1184)
+EVAL: [48/49] Elapsed 0m 31s (remain 0m 0s) Loss: 0.1037(0.1044)
+[2022-11-02 04:59:39] - Epoch 5 - avg_train_loss: 0.0933  avg_val_loss: 0.1044  time: 249s
+[2022-11-02 04:59:39] - Epoch 5 - Score: 0.4574  Scores: [0.4908902611850435, 0.46297552683935733, 0.4147792324956895, 0.45707233935422964, 0.46413957692712104, 0.45470745698148307]
+[2022-11-02 04:59:39] - Epoch 5 - Save Best Score: 0.4574 Model
+[2022-11-02 04:59:41] - ========== fold: 0 result ==========
+[2022-11-02 04:59:41] - Score: 0.4574  Scores: [0.4908902611850435, 0.46297552683935733, 0.4147792324956895, 0.45707233935422964, 0.46413957692712104, 0.45470745698148307]
+[2022-11-02 04:59:41] - ========== fold: 1 training ==========
+[2022-11-02 04:59:41] - DebertaV2Config {
+  "_name_or_path": "microsoft/deberta-v3-base",
+  "attention_dropout": 0.0,
+  "attention_probs_dropout_prob": 0.0,
+  "hidden_act": "gelu",
+  "hidden_dropout": 0.0,
+  "hidden_dropout_prob": 0.0,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-07,
+  "max_position_embeddings": 512,
+  "max_relative_positions": -1,
+  "model_type": "deberta-v2",
+  "norm_rel_ebd": "layer_norm",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_hidden_states": true,
+  "pad_token_id": 0,
+  "pooler_dropout": 0,
+  "pooler_hidden_act": "gelu",
+  "pooler_hidden_size": 768,
+  "pos_att_type": [
+    "p2c",
+    "c2p"
+  ],
+  "position_biased_input": false,
+  "position_buckets": 256,
+  "relative_attention": true,
+  "share_att_key": true,
+  "transformers_version": "4.21.1",
+  "type_vocab_size": 0,
+  "vocab_size": 128100
+}
+Some weights of the model checkpoint at microsoft/deberta-v3-base were not used when initializing DebertaV2Model: ['lm_predictions.lm_head.bias', 'mask_predictions.dense.bias', 'lm_predictions.lm_head.LayerNorm.bias', 'lm_predictions.lm_head.dense.weight', 'mask_predictions.LayerNorm.bias', 'mask_predictions.classifier.bias', 'lm_predictions.lm_head.dense.bias', 'mask_predictions.classifier.weight', 'mask_predictions.dense.weight', 'lm_predictions.lm_head.LayerNorm.weight', 'mask_predictions.LayerNorm.weight']
+- This IS expected if you are initializing DebertaV2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Reinitializing Last 1 Layers ...
+Done.!
+Epoch: [1][0/391] Elapsed 0m 0s (remain 3m 52s) Loss: 2.4842(2.4842) Grad: inf  LR: 0.00002994
+Epoch: [1][100/391] Elapsed 0m 55s (remain 2m 39s) Loss: 0.1101(0.2811) Grad: 152453.1406  LR: 0.00002994
+Epoch: [1][200/391] Elapsed 1m 48s (remain 1m 42s) Loss: 0.0969(0.2102) Grad: 36092.6641  LR: 0.00002994
+Epoch: [1][300/391] Elapsed 2m 41s (remain 0m 48s) Loss: 0.0998(0.1791) Grad: 138078.3281  LR: 0.00002994
+Epoch: [1][390/391] Elapsed 3m 35s (remain 0m 0s) Loss: 0.1346(0.1663) Grad: 125665.4141  LR: 0.00002821
+EVAL: [0/49] Elapsed 0m 1s (remain 0m 57s) Loss: 0.1235(0.1235)
+EVAL: [48/49] Elapsed 0m 31s (remain 0m 0s) Loss: 0.1308(0.1203)
+[2022-11-02 05:03:50] - Epoch 1 - avg_train_loss: 0.1663  avg_val_loss: 0.1203  time: 247s
+[2022-11-02 05:03:50] - Epoch 1 - Score: 0.4917  Scores: [0.5648622965138824, 0.471067566693027, 0.43602834351486697, 0.49147240326023833, 0.4895644597685644, 0.4974070463886835]
+[2022-11-02 05:03:50] - Epoch 1 - Save Best Score: 0.4917 Model
+Epoch: [2][0/391] Elapsed 0m 0s (remain 3m 31s) Loss: 0.1212(0.1212) Grad: 114063.9062  LR: 0.00002864
+Epoch: [2][100/391] Elapsed 0m 54s (remain 2m 35s) Loss: 0.0783(0.1097) Grad: 95066.3438  LR: 0.00002864
+Epoch: [2][200/391] Elapsed 1m 49s (remain 1m 43s) Loss: 0.0816(0.1062) Grad: 132175.9219  LR: 0.00002864
+Epoch: [2][300/391] Elapsed 2m 47s (remain 0m 50s) Loss: 0.1009(0.1072) Grad: 130011.5781  LR: 0.00002864
+Epoch: [2][390/391] Elapsed 3m 36s (remain 0m 0s) Loss: 0.1136(0.1072) Grad: 231336.2031  LR: 0.00002231
+EVAL: [0/49] Elapsed 0m 1s (remain 0m 58s) Loss: 0.1279(0.1279)
+[2022-11-02 05:08:00] - Epoch 2 - avg_train_loss: 0.1072  avg_val_loss: 0.1241  time: 248s
+[2022-11-02 05:08:00] - Epoch 2 - Score: 0.5002  Scores: [0.5514114858104816, 0.5123530608657384, 0.46620933550073773, 0.5041401540067523, 0.4842022366360081, 0.482908969609418]
+EVAL: [48/49] Elapsed 0m 31s (remain 0m 0s) Loss: 0.1325(0.1241)
+Epoch: [3][0/391] Elapsed 0m 0s (remain 6m 27s) Loss: 0.1230(0.1230) Grad: 162591.2031  LR: 0.00002312
+Epoch: [3][100/391] Elapsed 1m 0s (remain 2m 53s) Loss: 0.0871(0.1050) Grad: 134770.8750  LR: 0.00002312
+Epoch: [3][200/391] Elapsed 1m 55s (remain 1m 49s) Loss: 0.1187(0.1046) Grad: 358624.6875  LR: 0.00002312
+Epoch: [3][300/391] Elapsed 2m 48s (remain 0m 50s) Loss: 0.1187(0.1027) Grad: 211537.3281  LR: 0.00002312
+Epoch: [3][390/391] Elapsed 3m 33s (remain 0m 0s) Loss: 0.1137(0.1027) Grad: 151667.2188  LR: 0.00001417
+EVAL: [0/49] Elapsed 0m 1s (remain 0m 56s) Loss: 0.1031(0.1031)
+EVAL: [48/49] Elapsed 0m 31s (remain 0m 0s) Loss: 0.1191(0.1102)
+[2022-11-02 05:12:05] - Epoch 3 - avg_train_loss: 0.1027  avg_val_loss: 0.1102  time: 245s
+[2022-11-02 05:12:05] - Epoch 3 - Score: 0.4704  Scores: [0.5296697171222592, 0.4444858580325189, 0.4461473192044267, 0.47335691036428207, 0.47050385834556474, 0.458339863292656]
+[2022-11-02 05:12:05] - Epoch 3 - Save Best Score: 0.4704 Model
+Epoch: [4][0/391] Elapsed 0m 1s (remain 6m 56s) Loss: 0.1150(0.1150) Grad: 502263.0000  LR: 0.00001511
+Epoch: [4][100/391] Elapsed 0m 54s (remain 2m 36s) Loss: 0.1291(0.0972) Grad: 270823.0312  LR: 0.00001511
+Epoch: [4][200/391] Elapsed 1m 48s (remain 1m 43s) Loss: 0.1158(0.0982) Grad: 190845.9688  LR: 0.00001511
+Epoch: [4][300/391] Elapsed 2m 43s (remain 0m 48s) Loss: 0.1311(0.0979) Grad: 192341.5469  LR: 0.00001511
+Epoch: [4][390/391] Elapsed 3m 33s (remain 0m 0s) Loss: 0.1171(0.0984) Grad: 245777.8438  LR: 0.00000633
+EVAL: [0/49] Elapsed 0m 1s (remain 0m 56s) Loss: 0.0978(0.0978)
+[2022-11-02 05:16:12] - Epoch 4 - avg_train_loss: 0.0984  avg_val_loss: 0.1055  time: 245s
+[2022-11-02 05:16:12] - Epoch 4 - Score: 0.4605  Scores: [0.4946226952151839, 0.4471509826790082, 0.4221014145961405, 0.4762072917277237, 0.4700672325648761, 0.45258679611719466]
+[2022-11-02 05:16:12] - Epoch 4 - Save Best Score: 0.4605 Model
+EVAL: [48/49] Elapsed 0m 31s (remain 0m 0s) Loss: 0.1075(0.1055)
+Epoch: [5][0/391] Elapsed 0m 0s (remain 3m 19s) Loss: 0.0467(0.0467) Grad: 79344.7734  LR: 0.00000711
+Epoch: [5][100/391] Elapsed 0m 54s (remain 2m 35s) Loss: 0.0851(0.0922) Grad: 180097.8750  LR: 0.00000711
+Epoch: [5][200/391] Elapsed 1m 46s (remain 1m 40s) Loss: 0.0795(0.0917) Grad: 114396.8438  LR: 0.00000711
+Epoch: [5][300/391] Elapsed 2m 43s (remain 0m 48s) Loss: 0.0548(0.0930) Grad: 71680.7578  LR: 0.00000711
+Epoch: [5][390/391] Elapsed 3m 33s (remain 0m 0s) Loss: 0.0828(0.0928) Grad: 101372.5156  LR: 0.00000124
+EVAL: [0/49] Elapsed 0m 1s (remain 0m 57s) Loss: 0.1090(0.1090)
+[2022-11-02 05:20:18] - Epoch 5 - avg_train_loss: 0.0928  avg_val_loss: 0.1088  time: 245s
+[2022-11-02 05:20:18] - Epoch 5 - Score: 0.4677  Scores: [0.5022546326389618, 0.44870032071545474, 0.42741063459982603, 0.47653926696844046, 0.48347950777717535, 0.4678834048833694]
+EVAL: [48/49] Elapsed 0m 31s (remain 0m 0s) Loss: 0.0962(0.1088)
+[2022-11-02 05:20:19] - ========== fold: 1 result ==========
+[2022-11-02 05:20:19] - Score: 0.4605  Scores: [0.4946226952151839, 0.4471509826790082, 0.4221014145961405, 0.4762072917277237, 0.4700672325648761, 0.45258679611719466]
+[2022-11-02 05:20:19] - ========== fold: 2 training ==========
+[2022-11-02 05:20:19] - DebertaV2Config {
+  "_name_or_path": "microsoft/deberta-v3-base",
+  "attention_dropout": 0.0,
+  "attention_probs_dropout_prob": 0.0,
+  "hidden_act": "gelu",
+  "hidden_dropout": 0.0,
+  "hidden_dropout_prob": 0.0,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-07,
+  "max_position_embeddings": 512,
+  "max_relative_positions": -1,
+  "model_type": "deberta-v2",
+  "norm_rel_ebd": "layer_norm",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_hidden_states": true,
+  "pad_token_id": 0,
+  "pooler_dropout": 0,
+  "pooler_hidden_act": "gelu",
+  "pooler_hidden_size": 768,
+  "pos_att_type": [
+    "p2c",
+    "c2p"
+  ],
+  "position_biased_input": false,
+  "position_buckets": 256,
+  "relative_attention": true,
+  "share_att_key": true,
+  "transformers_version": "4.21.1",
+  "type_vocab_size": 0,
+  "vocab_size": 128100
+}
+Some weights of the model checkpoint at microsoft/deberta-v3-base were not used when initializing DebertaV2Model: ['lm_predictions.lm_head.bias', 'mask_predictions.dense.bias', 'lm_predictions.lm_head.LayerNorm.bias', 'lm_predictions.lm_head.dense.weight', 'mask_predictions.LayerNorm.bias', 'mask_predictions.classifier.bias', 'lm_predictions.lm_head.dense.bias', 'mask_predictions.classifier.weight', 'mask_predictions.dense.weight', 'lm_predictions.lm_head.LayerNorm.weight', 'mask_predictions.LayerNorm.weight']
+- This IS expected if you are initializing DebertaV2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Reinitializing Last 1 Layers ...
+Done.!
+Epoch: [1][0/391] Elapsed 0m 0s (remain 3m 35s) Loss: 2.5073(2.5073) Grad: inf  LR: 0.00002994
+Epoch: [1][100/391] Elapsed 0m 55s (remain 2m 38s) Loss: 0.1605(0.3138) Grad: 160604.7656  LR: 0.00002994
+Epoch: [1][200/391] Elapsed 1m 50s (remain 1m 44s) Loss: 0.1638(0.2197) Grad: 186974.9219  LR: 0.00002994
+Epoch: [1][300/391] Elapsed 2m 45s (remain 0m 49s) Loss: 0.1043(0.1861) Grad: 135475.4219  LR: 0.00002994
+Epoch: [1][390/391] Elapsed 3m 32s (remain 0m 0s) Loss: 0.1354(0.1693) Grad: 121589.8750  LR: 0.00002821
+EVAL: [0/49] Elapsed 0m 0s (remain 0m 30s) Loss: 0.1030(0.1030)
+EVAL: [48/49] Elapsed 0m 33s (remain 0m 0s) Loss: 0.0841(0.1222)
+[2022-11-02 05:24:26] - Epoch 1 - avg_train_loss: 0.1693  avg_val_loss: 0.1222  time: 246s
+[2022-11-02 05:24:26] - Epoch 1 - Score: 0.4966  Scores: [0.5605438689166836, 0.4642164768332892, 0.4997793140752395, 0.4844425827578974, 0.4851029248872335, 0.48545169070306193]
+[2022-11-02 05:24:26] - Epoch 1 - Save Best Score: 0.4966 Model
+Epoch: [2][0/391] Elapsed 0m 0s (remain 3m 25s) Loss: 0.1463(0.1463) Grad: 205240.5938  LR: 0.00002864
+Epoch: [2][100/391] Elapsed 0m 56s (remain 2m 43s) Loss: 0.0835(0.1092) Grad: 157997.0156  LR: 0.00002864
+Epoch: [2][200/391] Elapsed 1m 51s (remain 1m 44s) Loss: 0.1005(0.1052) Grad: 190924.1562  LR: 0.00002864
+Epoch: [2][300/391] Elapsed 2m 43s (remain 0m 48s) Loss: 0.1173(0.1052) Grad: 164572.2812  LR: 0.00002864
+Epoch: [2][390/391] Elapsed 3m 30s (remain 0m 0s) Loss: 0.0855(0.1064) Grad: 162521.9531  LR: 0.00002231
+EVAL: [0/49] Elapsed 0m 0s (remain 0m 30s) Loss: 0.0763(0.0763)
+EVAL: [48/49] Elapsed 0m 33s (remain 0m 0s) Loss: 0.0760(0.1121)
+[2022-11-02 05:28:32] - Epoch 2 - avg_train_loss: 0.1064  avg_val_loss: 0.1121  time: 245s
+[2022-11-02 05:28:32] - Epoch 2 - Score: 0.4752  Scores: [0.5134746112999344, 0.4679890181606866, 0.4563961526965873, 0.45520850139874647, 0.49018019477168906, 0.46782603127169703]
+[2022-11-02 05:28:32] - Epoch 2 - Save Best Score: 0.4752 Model
+Epoch: [3][0/391] Elapsed 0m 0s (remain 3m 55s) Loss: 0.1680(0.1680) Grad: 165113.2969  LR: 0.00002312
+Epoch: [3][100/391] Elapsed 0m 55s (remain 2m 38s) Loss: 0.0755(0.0984) Grad: 134846.4844  LR: 0.00002312
+Epoch: [3][200/391] Elapsed 1m 46s (remain 1m 41s) Loss: 0.0904(0.1026) Grad: 174729.6250  LR: 0.00002312
+Epoch: [3][300/391] Elapsed 2m 36s (remain 0m 46s) Loss: 0.0884(0.1019) Grad: 173091.2500  LR: 0.00002312
+Epoch: [3][390/391] Elapsed 3m 28s (remain 0m 0s) Loss: 0.0584(0.1012) Grad: 129292.7031  LR: 0.00001417
+EVAL: [0/49] Elapsed 0m 0s (remain 0m 31s) Loss: 0.0722(0.0722)
+EVAL: [48/49] Elapsed 0m 33s (remain 0m 0s) Loss: 0.0796(0.1095)
+[2022-11-02 05:32:36] - Epoch 3 - avg_train_loss: 0.1012  avg_val_loss: 0.1095  time: 242s
+[2022-11-02 05:32:36] - Epoch 3 - Score: 0.4693  Scores: [0.5037407126675374, 0.4677319925845777, 0.42988833348488964, 0.44994541328023246, 0.4872159429272424, 0.4774963414124076]
+[2022-11-02 05:32:36] - Epoch 3 - Save Best Score: 0.4693 Model
+Epoch: [4][0/391] Elapsed 0m 0s (remain 3m 54s) Loss: 0.0747(0.0747) Grad: 126250.9531  LR: 0.00001511
+Epoch: [4][100/391] Elapsed 0m 54s (remain 2m 36s) Loss: 0.0747(0.0949) Grad: 113006.7812  LR: 0.00001511
+Epoch: [4][200/391] Elapsed 1m 50s (remain 1m 44s) Loss: 0.1350(0.0934) Grad: 233328.4688  LR: 0.00001511
+Epoch: [4][300/391] Elapsed 2m 45s (remain 0m 49s) Loss: 0.1092(0.0931) Grad: 1019513.8125  LR: 0.00001511
+Epoch: [4][390/391] Elapsed 3m 32s (remain 0m 0s) Loss: 0.1452(0.0941) Grad: 621628.9375  LR: 0.00000633
+EVAL: [0/49] Elapsed 0m 0s (remain 0m 30s) Loss: 0.0705(0.0705)
+[2022-11-02 05:36:44] - Epoch 4 - avg_train_loss: 0.0941  avg_val_loss: 0.1066  time: 246s
+[2022-11-02 05:36:44] - Epoch 4 - Score: 0.4629  Scores: [0.5006600596362375, 0.46351531158964526, 0.4259802731332217, 0.4556507561460764, 0.4750929317915033, 0.4565909882790716]
+[2022-11-02 05:36:44] - Epoch 4 - Save Best Score: 0.4629 Model
+EVAL: [48/49] Elapsed 0m 33s (remain 0m 0s) Loss: 0.0766(0.1066)
+Epoch: [5][0/391] Elapsed 0m 0s (remain 2m 54s) Loss: 0.1006(0.1006) Grad: 205342.5469  LR: 0.00000711
+Epoch: [5][100/391] Elapsed 0m 57s (remain 2m 44s) Loss: 0.0652(0.0873) Grad: 104297.7812  LR: 0.00000711
+Epoch: [5][200/391] Elapsed 1m 48s (remain 1m 42s) Loss: 0.0740(0.0856) Grad: 248130.7500  LR: 0.00000711
+Epoch: [5][300/391] Elapsed 2m 43s (remain 0m 48s) Loss: 0.0537(0.0864) Grad: 116842.0859  LR: 0.00000711
+Epoch: [5][390/391] Elapsed 3m 33s (remain 0m 0s) Loss: 0.0887(0.0876) Grad: 164404.8906  LR: 0.00000124
+EVAL: [0/49] Elapsed 0m 0s (remain 0m 31s) Loss: 0.0733(0.0733)
+EVAL: [48/49] Elapsed 0m 33s (remain 0m 0s) Loss: 0.0816(0.1079)
+[2022-11-02 05:40:52] - Epoch 5 - avg_train_loss: 0.0876  avg_val_loss: 0.1079  time: 247s
+[2022-11-02 05:40:52] - Epoch 5 - Score: 0.4658  Scores: [0.5033072854468662, 0.4605260775330511, 0.4348298599410605, 0.45681377147923885, 0.4761311057933802, 0.46309110783407864]
+[2022-11-02 05:40:53] - ========== fold: 2 result ==========
+[2022-11-02 05:40:53] - Score: 0.4629  Scores: [0.5006600596362375, 0.46351531158964526, 0.4259802731332217, 0.4556507561460764, 0.4750929317915033, 0.4565909882790716]
+[2022-11-02 05:40:53] - ========== fold: 3 training ==========
+[2022-11-02 05:40:53] - DebertaV2Config {
+  "_name_or_path": "microsoft/deberta-v3-base",
+  "attention_dropout": 0.0,
+  "attention_probs_dropout_prob": 0.0,
+  "hidden_act": "gelu",
+  "hidden_dropout": 0.0,
+  "hidden_dropout_prob": 0.0,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-07,
+  "max_position_embeddings": 512,
+  "max_relative_positions": -1,
+  "model_type": "deberta-v2",
+  "norm_rel_ebd": "layer_norm",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_hidden_states": true,
+  "pad_token_id": 0,
+  "pooler_dropout": 0,
+  "pooler_hidden_act": "gelu",
+  "pooler_hidden_size": 768,
+  "pos_att_type": [
+    "p2c",
+    "c2p"
+  ],
+  "position_biased_input": false,
+  "position_buckets": 256,
+  "relative_attention": true,
+  "share_att_key": true,
+  "transformers_version": "4.21.1",
+  "type_vocab_size": 0,
+  "vocab_size": 128100
+}
+Reinitializing Last 1 Layers ...
+Done.!
+Some weights of the model checkpoint at microsoft/deberta-v3-base were not used when initializing DebertaV2Model: ['lm_predictions.lm_head.bias', 'mask_predictions.dense.bias', 'lm_predictions.lm_head.LayerNorm.bias', 'lm_predictions.lm_head.dense.weight', 'mask_predictions.LayerNorm.bias', 'mask_predictions.classifier.bias', 'lm_predictions.lm_head.dense.bias', 'mask_predictions.classifier.weight', 'mask_predictions.dense.weight', 'lm_predictions.lm_head.LayerNorm.weight', 'mask_predictions.LayerNorm.weight']
+- This IS expected if you are initializing DebertaV2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch: [1][0/391] Elapsed 0m 0s (remain 5m 13s) Loss: 3.0318(3.0318) Grad: inf  LR: 0.00002994
+Epoch: [1][100/391] Elapsed 0m 55s (remain 2m 39s) Loss: 0.0740(0.3280) Grad: 100068.4766  LR: 0.00002994
+Epoch: [1][200/391] Elapsed 1m 46s (remain 1m 40s) Loss: 0.1301(0.2265) Grad: 139844.0156  LR: 0.00002994
+Epoch: [1][300/391] Elapsed 2m 44s (remain 0m 49s) Loss: 0.1368(0.1934) Grad: 93604.2578  LR: 0.00002994
+Epoch: [1][390/391] Elapsed 3m 34s (remain 0m 0s) Loss: 0.0716(0.1759) Grad: 72112.6016  LR: 0.00002821
+EVAL: [0/49] Elapsed 0m 1s (remain 0m 54s) Loss: 0.1250(0.1250)
+[2022-11-02 05:45:03] - Epoch 1 - avg_train_loss: 0.1759  avg_val_loss: 0.1153  time: 249s
+[2022-11-02 05:45:03] - Epoch 1 - Score: 0.4809  Scores: [0.5266042476585941, 0.4718131242396997, 0.4421834387295667, 0.47614717023847863, 0.5156305772165385, 0.4532834051602369]
+[2022-11-02 05:45:03] - Epoch 1 - Save Best Score: 0.4809 Model
+EVAL: [48/49] Elapsed 0m 34s (remain 0m 0s) Loss: 0.0839(0.1153)
+Epoch: [2][0/391] Elapsed 0m 0s (remain 5m 32s) Loss: 0.0719(0.0719) Grad: 149502.5625  LR: 0.00002864
+Epoch: [2][100/391] Elapsed 0m 59s (remain 2m 51s) Loss: 0.1015(0.1102) Grad: 118291.5391  LR: 0.00002864
+Epoch: [2][200/391] Elapsed 1m 51s (remain 1m 45s) Loss: 0.0811(0.1093) Grad: 177148.5781  LR: 0.00002864
+Epoch: [2][300/391] Elapsed 2m 47s (remain 0m 50s) Loss: 0.0950(0.1085) Grad: 179282.7188  LR: 0.00002864
+Epoch: [2][390/391] Elapsed 3m 34s (remain 0m 0s) Loss: 0.0875(0.1090) Grad: 184151.0469  LR: 0.00002231
+EVAL: [0/49] Elapsed 0m 1s (remain 0m 54s) Loss: 0.1184(0.1184)
+EVAL: [48/49] Elapsed 0m 33s (remain 0m 0s) Loss: 0.0717(0.1075)
+[2022-11-02 05:49:13] - Epoch 2 - avg_train_loss: 0.1090  avg_val_loss: 0.1075  time: 248s
+[2022-11-02 05:49:13] - Epoch 2 - Score: 0.4644  Scores: [0.4883604286130284, 0.4795685847657647, 0.4239492494470432, 0.46107630493814694, 0.48990051142400204, 0.4434300526987819]
+[2022-11-02 05:49:13] - Epoch 2 - Save Best Score: 0.4644 Model
+Epoch: [3][0/391] Elapsed 0m 0s (remain 6m 12s) Loss: 0.0828(0.0828) Grad: 177975.9062  LR: 0.00002312
+Epoch: [3][100/391] Elapsed 0m 56s (remain 2m 42s) Loss: 0.0880(0.0985) Grad: 132909.1250  LR: 0.00002312
+Epoch: [3][200/391] Elapsed 1m 49s (remain 1m 43s) Loss: 0.0896(0.1024) Grad: 122670.4453  LR: 0.00002312
+Epoch: [3][300/391] Elapsed 2m 44s (remain 0m 49s) Loss: 0.0957(0.1032) Grad: 110973.5625  LR: 0.00002312
+Epoch: [3][390/391] Elapsed 3m 31s (remain 0m 0s) Loss: 0.1226(0.1019) Grad: 133042.3125  LR: 0.00001417
+EVAL: [0/49] Elapsed 0m 1s (remain 0m 54s) Loss: 0.1242(0.1242)
+EVAL: [48/49] Elapsed 0m 33s (remain 0m 0s) Loss: 0.0680(0.1067)
+[2022-11-02 05:53:20] - Epoch 3 - avg_train_loss: 0.1019  avg_val_loss: 0.1067  time: 246s
+[2022-11-02 05:53:20] - Epoch 3 - Score: 0.4626  Scores: [0.4863094716496316, 0.44864255496603933, 0.4345563348176588, 0.46242179317463805, 0.4994940045496495, 0.4442234221350628]
+[2022-11-02 05:53:20] - Epoch 3 - Save Best Score: 0.4626 Model
+Epoch: [4][0/391] Elapsed 0m 0s (remain 3m 28s) Loss: 0.1092(0.1092) Grad: 148545.4375  LR: 0.00001511
+Epoch: [4][100/391] Elapsed 0m 55s (remain 2m 39s) Loss: 0.0645(0.1028) Grad: 120859.3438  LR: 0.00001511
+Epoch: [4][200/391] Elapsed 1m 46s (remain 1m 41s) Loss: 0.1025(0.0997) Grad: 128014.1797  LR: 0.00001511
+Epoch: [4][300/391] Elapsed 2m 43s (remain 0m 48s) Loss: 0.0763(0.0970) Grad: 141092.3750  LR: 0.00001511
+Epoch: [4][390/391] Elapsed 3m 31s (remain 0m 0s) Loss: 0.0887(0.0984) Grad: 70877.9453  LR: 0.00000633
+EVAL: [0/49] Elapsed 0m 1s (remain 0m 54s) Loss: 0.1123(0.1123)
+[2022-11-02 05:57:26] - Epoch 4 - avg_train_loss: 0.0984  avg_val_loss: 0.1065  time: 245s
+[2022-11-02 05:57:26] - Epoch 4 - Score: 0.4622  Scores: [0.4857107920122242, 0.45049746683016684, 0.42635771849527526, 0.4782023725683721, 0.49225287798436684, 0.43992761105937617]
+[2022-11-02 05:57:26] - Epoch 4 - Save Best Score: 0.4622 Model
+EVAL: [48/49] Elapsed 0m 33s (remain 0m 0s) Loss: 0.0644(0.1065)
+Epoch: [5][0/391] Elapsed 0m 0s (remain 3m 11s) Loss: 0.0962(0.0962) Grad: 126853.5000  LR: 0.00000711
+Epoch: [5][100/391] Elapsed 0m 51s (remain 2m 27s) Loss: 0.1257(0.0932) Grad: 230961.0781  LR: 0.00000711
+Epoch: [5][200/391] Elapsed 1m 49s (remain 1m 43s) Loss: 0.1304(0.0933) Grad: 146817.7969  LR: 0.00000711
+Epoch: [5][300/391] Elapsed 2m 46s (remain 0m 49s) Loss: 0.0975(0.0932) Grad: 211223.9375  LR: 0.00000711
+Epoch: [5][390/391] Elapsed 3m 30s (remain 0m 0s) Loss: 0.0767(0.0937) Grad: 114574.8594  LR: 0.00000124
+EVAL: [0/49] Elapsed 0m 1s (remain 0m 54s) Loss: 0.1084(0.1084)
+[2022-11-02 06:01:33] - Epoch 5 - avg_train_loss: 0.0937  avg_val_loss: 0.1062  time: 245s
+[2022-11-02 06:01:33] - Epoch 5 - Score: 0.4616  Scores: [0.4764889738371816, 0.45077373617684874, 0.42230070649168205, 0.4682966930005463, 0.49477856637349393, 0.4570976556123367]
+[2022-11-02 06:01:33] - Epoch 5 - Save Best Score: 0.4616 Model
+EVAL: [48/49] Elapsed 0m 33s (remain 0m 0s) Loss: 0.0724(0.1062)
+[2022-11-02 06:01:35] - ========== fold: 3 result ==========
+[2022-11-02 06:01:35] - Score: 0.4616  Scores: [0.4764889738371816, 0.45077373617684874, 0.42230070649168205, 0.4682966930005463, 0.49477856637349393, 0.4570976556123367]
+[2022-11-02 06:01:35] - ========== fold: 4 training ==========
+[2022-11-02 06:01:35] - DebertaV2Config {
+  "_name_or_path": "microsoft/deberta-v3-base",
+  "attention_dropout": 0.0,
+  "attention_probs_dropout_prob": 0.0,
+  "hidden_act": "gelu",
+  "hidden_dropout": 0.0,
+  "hidden_dropout_prob": 0.0,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-07,
+  "max_position_embeddings": 512,
+  "max_relative_positions": -1,
+  "model_type": "deberta-v2",
+  "norm_rel_ebd": "layer_norm",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_hidden_states": true,
+  "pad_token_id": 0,
+  "pooler_dropout": 0,
+  "pooler_hidden_act": "gelu",
+  "pooler_hidden_size": 768,
+  "pos_att_type": [
+    "p2c",
+    "c2p"
+  ],
+  "position_biased_input": false,
+  "position_buckets": 256,
+  "relative_attention": true,
+  "share_att_key": true,
+  "transformers_version": "4.21.1",
+  "type_vocab_size": 0,
+  "vocab_size": 128100
+}
+Reinitializing Last 1 Layers ...
+Done.!
+Some weights of the model checkpoint at microsoft/deberta-v3-base were not used when initializing DebertaV2Model: ['lm_predictions.lm_head.bias', 'mask_predictions.dense.bias', 'lm_predictions.lm_head.LayerNorm.bias', 'lm_predictions.lm_head.dense.weight', 'mask_predictions.LayerNorm.bias', 'mask_predictions.classifier.bias', 'lm_predictions.lm_head.dense.bias', 'mask_predictions.classifier.weight', 'mask_predictions.dense.weight', 'lm_predictions.lm_head.LayerNorm.weight', 'mask_predictions.LayerNorm.weight']
+- This IS expected if you are initializing DebertaV2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch: [1][0/391] Elapsed 0m 0s (remain 4m 14s) Loss: 2.4155(2.4155) Grad: inf  LR: 0.00002994
+Epoch: [1][100/391] Elapsed 0m 56s (remain 2m 42s) Loss: 0.1365(0.2907) Grad: 125255.5078  LR: 0.00002994
+Epoch: [1][200/391] Elapsed 1m 49s (remain 1m 43s) Loss: 0.1425(0.2099) Grad: 201930.4844  LR: 0.00002994
+Epoch: [1][300/391] Elapsed 2m 42s (remain 0m 48s) Loss: 0.1480(0.1809) Grad: 114574.9688  LR: 0.00002994
+Epoch: [1][390/391] Elapsed 3m 32s (remain 0m 0s) Loss: 0.1388(0.1677) Grad: 127567.7891  LR: 0.00002821
+EVAL: [0/49] Elapsed 0m 1s (remain 1m 3s) Loss: 0.1108(0.1108)
+EVAL: [48/49] Elapsed 0m 32s (remain 0m 0s) Loss: 0.0755(0.1246)
+[2022-11-02 06:05:42] - Epoch 1 - avg_train_loss: 0.1677  avg_val_loss: 0.1246  time: 245s
+[2022-11-02 06:05:42] - Epoch 1 - Score: 0.5005  Scores: [0.5557451980398069, 0.45036961152103105, 0.5178709383825044, 0.47135217578403626, 0.5247712518880737, 0.4830523599827253]
+[2022-11-02 06:05:42] - Epoch 1 - Save Best Score: 0.5005 Model
+Epoch: [2][0/391] Elapsed 0m 0s (remain 6m 29s) Loss: 0.1402(0.1402) Grad: 234867.6875  LR: 0.00002864
+Epoch: [2][100/391] Elapsed 0m 54s (remain 2m 36s) Loss: 0.1063(0.1177) Grad: 226397.6094  LR: 0.00002864
+Epoch: [2][200/391] Elapsed 1m 54s (remain 1m 48s) Loss: 0.1584(0.1106) Grad: 258350.1875  LR: 0.00002864
+Epoch: [2][300/391] Elapsed 2m 44s (remain 0m 49s) Loss: 0.1592(0.1100) Grad: 250083.7969  LR: 0.00002864
+Epoch: [2][390/391] Elapsed 3m 31s (remain 0m 0s) Loss: 0.1367(0.1089) Grad: 197418.2500  LR: 0.00002231
+EVAL: [0/49] Elapsed 0m 1s (remain 1m 3s) Loss: 0.1052(0.1052)
+EVAL: [48/49] Elapsed 0m 32s (remain 0m 0s) Loss: 0.0797(0.1170)
+[2022-11-02 06:09:47] - Epoch 2 - avg_train_loss: 0.1089  avg_val_loss: 0.1170  time: 244s
+[2022-11-02 06:09:47] - Epoch 2 - Score: 0.4847  Scores: [0.48397925980936923, 0.5452531152369244, 0.4282688646495871, 0.5014979186634956, 0.4889738775381223, 0.4602101050417225]
+[2022-11-02 06:09:47] - Epoch 2 - Save Best Score: 0.4847 Model
+Epoch: [3][0/391] Elapsed 0m 0s (remain 3m 17s) Loss: 0.0911(0.0911) Grad: 195914.6250  LR: 0.00002312
+Epoch: [3][100/391] Elapsed 0m 52s (remain 2m 30s) Loss: 0.1700(0.1079) Grad: 216543.0000  LR: 0.00002312
+Epoch: [3][200/391] Elapsed 1m 48s (remain 1m 42s) Loss: 0.1120(0.1036) Grad: 180126.9688  LR: 0.00002312
+Epoch: [3][300/391] Elapsed 2m 43s (remain 0m 48s) Loss: 0.0758(0.1010) Grad: 138245.2031  LR: 0.00002312
+Epoch: [3][390/391] Elapsed 3m 34s (remain 0m 0s) Loss: 0.1382(0.1031) Grad: 149955.4375  LR: 0.00001417
+EVAL: [0/49] Elapsed 0m 1s (remain 1m 3s) Loss: 0.0931(0.0931)
+[2022-11-02 06:13:56] - Epoch 3 - avg_train_loss: 0.1031  avg_val_loss: 0.1029  time: 247s
+[2022-11-02 06:13:56] - Epoch 3 - Score: 0.4547  Scores: [0.4837961807746814, 0.43438633697861523, 0.4236086420047567, 0.456623794571344, 0.4812315616844469, 0.4484668142616276]
+[2022-11-02 06:13:56] - Epoch 3 - Save Best Score: 0.4547 Model
+EVAL: [48/49] Elapsed 0m 32s (remain 0m 0s) Loss: 0.0765(0.1029)
+Epoch: [4][0/391] Elapsed 0m 1s (remain 6m 36s) Loss: 0.0766(0.0766) Grad: 182537.1562  LR: 0.00001511
+Epoch: [4][100/391] Elapsed 0m 57s (remain 2m 44s) Loss: 0.0807(0.1039) Grad: 94087.0312  LR: 0.00001511
+Epoch: [4][200/391] Elapsed 1m 51s (remain 1m 45s) Loss: 0.0573(0.0989) Grad: 123260.2188  LR: 0.00001511
+Epoch: [4][300/391] Elapsed 2m 44s (remain 0m 49s) Loss: 0.0982(0.1011) Grad: 194842.6562  LR: 0.00001511
+Epoch: [4][390/391] Elapsed 3m 31s (remain 0m 0s) Loss: 0.0836(0.0993) Grad: 142026.4844  LR: 0.00000633
+EVAL: [0/49] Elapsed 0m 1s (remain 1m 1s) Loss: 0.0947(0.0947)
+EVAL: [48/49] Elapsed 0m 32s (remain 0m 0s) Loss: 0.0788(0.1027)
+[2022-11-02 06:18:00] - Epoch 4 - avg_train_loss: 0.0993  avg_val_loss: 0.1027  time: 243s
+[2022-11-02 06:18:00] - Epoch 4 - Score: 0.4541  Scores: [0.4767117344939027, 0.43196531416012757, 0.4248219929361393, 0.4631079765626576, 0.47420821896030557, 0.45397414596138813]
+[2022-11-02 06:18:00] - Epoch 4 - Save Best Score: 0.4541 Model
+Epoch: [5][0/391] Elapsed 0m 0s (remain 2m 59s) Loss: 0.0955(0.0955) Grad: 119158.9688  LR: 0.00000711
+Epoch: [5][100/391] Elapsed 0m 52s (remain 2m 32s) Loss: 0.0775(0.0921) Grad: 89869.9375  LR: 0.00000711
+Epoch: [5][200/391] Elapsed 1m 43s (remain 1m 38s) Loss: 0.0620(0.0940) Grad: 83147.7891  LR: 0.00000711
+Epoch: [5][300/391] Elapsed 2m 40s (remain 0m 47s) Loss: 0.0824(0.0923) Grad: 99384.8516  LR: 0.00000711
+Epoch: [5][390/391] Elapsed 3m 28s (remain 0m 0s) Loss: 0.0913(0.0929) Grad: 246417.8750  LR: 0.00000124
+EVAL: [0/49] Elapsed 0m 1s (remain 1m 2s) Loss: 0.0992(0.0992)
+[2022-11-02 06:22:02] - Epoch 5 - avg_train_loss: 0.0929  avg_val_loss: 0.1057  time: 240s
+[2022-11-02 06:22:02] - Epoch 5 - Score: 0.4607  Scores: [0.4886318860531342, 0.4353899668969534, 0.425097312618793, 0.47036097472593974, 0.48568497902836544, 0.45890298526480205]
+EVAL: [48/49] Elapsed 0m 32s (remain 0m 0s) Loss: 0.0784(0.1057)
+[2022-11-02 06:22:03] - ========== fold: 4 result ==========
+[2022-11-02 06:22:03] - Score: 0.4541  Scores: [0.4767117344939027, 0.43196531416012757, 0.4248219929361393, 0.4631079765626576, 0.47420821896030557, 0.45397414596138813]
+[2022-11-02 06:22:03] - ========== CV ==========
+[2022-11-02 06:22:03] - Score: 0.4594  Scores: [0.48797326352514797, 0.45142504726431554, 0.4220147663125088, 0.4641317551927336, 0.47576767729232533, 0.45499384795873626]

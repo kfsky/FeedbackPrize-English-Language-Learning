@@ -1,0 +1,85 @@
+{
+    "os": "Linux-5.4.0-122-generic-x86_64-with-glibc2.31",
+    "python": "3.9.13",
+    "heartbeatAt": "2022-11-18T10:08:08.680927",
+    "startedAt": "2022-11-18T10:08:08.312462",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/notebooks/code/exp058.py",
+    "codePath": "code/exp058.py",
+    "git": {
+        "remote": "https://github.com/gradient-ai/PyTorch.git",
+        "commit": "d9434a603823e2d481bc350cc41f34fc536d8185"
+    },
+    "email": null,
+    "root": "/notebooks",
+    "host": "nq7ac9f1j3",
+    "username": "root",
+    "executable": "/usr/local/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 3200.0950000000003,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3200.095,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3200.095,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3200.095,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3200.095,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3200.095,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3200.095,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3200.095,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3200.095,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 245.95343399047852,
+        "used": 182.1553077697754
+    },
+    "gpu": "NVIDIA RTX A5000",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA RTX A5000",
+            "memory_total": 25757220864
+        }
+    ],
+    "memory": {
+        "total": 44.10197830200195
+    }
+}

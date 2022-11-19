@@ -1,0 +1,15 @@
+# Jupyter Notebook
+.ipynb_checkpoints
+
+.DS_Store
+
+input/*
+!.gitkeep
+
+output/*
+!.gitkeep
+
+config/*
+!.gitkeep
+
+src/mypipe/models/__pycache__

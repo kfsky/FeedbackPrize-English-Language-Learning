@@ -1,0 +1,22 @@
+(2813, 9)
+(1312, 8)
+Traceback (most recent call last):
+  File "/notebooks/code/exp058.py", line 828, in <module>
+    main()
+  File "/notebooks/code/exp058.py", line 732, in main
+    data_2021.loc[val_index2, 'fold'] = int(n)
+  File "/usr/local/lib/python3.9/dist-packages/pandas/core/indexing.py", line 712, in __setitem__
+    indexer = self._get_setitem_indexer(key)
+  File "/usr/local/lib/python3.9/dist-packages/pandas/core/indexing.py", line 661, in _get_setitem_indexer
+    return self._convert_tuple(key)
+  File "/usr/local/lib/python3.9/dist-packages/pandas/core/indexing.py", line 799, in _convert_tuple
+    idx = self._convert_to_indexer(k, axis=i)
+  File "/usr/local/lib/python3.9/dist-packages/pandas/core/indexing.py", line 1291, in _convert_to_indexer
+    return self._get_listlike_indexer(key, axis)[1]
+  File "/usr/local/lib/python3.9/dist-packages/pandas/core/indexing.py", line 1327, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+  File "/usr/local/lib/python3.9/dist-packages/pandas/core/indexes/base.py", line 5782, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "/usr/local/lib/python3.9/dist-packages/pandas/core/indexes/base.py", line 5845, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: '[9, 16, 22, 32, 35, 37, 47, 49, 51, 65, 86, 89, 91, 103, 113, 114, 136, 152, 160, 162, 180, 181, 183, 197, 203, 230, 268, 269, 276, 302, 304, 307, 308, 317, 324, 327, 330, 340, 374, 375, 382, 384, 405, 432, 439, 447, 448, 450, 503, 518, 525, 533, 558, 565, 568, 575, 592, 595, 597, 602, 603, 605, 608, 609, 612, 619, 641, 647, 651, 653, 656, 670, 674, 678, 694, 711, 717, 718, 729, 744, 760, 763, 764, 769, 776, 777, 787, 806, 807, 810, 820, 822, 834, 836, 874, 880, 890, 903, 912, 928, 932, 943, 951, 969, 983, 1008, 1016, 1019, 1020, 1029, 1047, 1050, 1075, 1083, 1085, 1106, 1109, 1124, 1131, 1150, 1157, 1161, 1165, 1167, 1169, 1177, 1179, 1181, 1185, 1188, 1192, 1197, 1217, 1221, 1226, 1267, 1279, 1288, 1294, 1304] not in index'

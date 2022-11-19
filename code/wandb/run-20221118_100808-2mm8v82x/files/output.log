@@ -1,0 +1,111 @@
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3911/3911 [00:04<00:00, 970.95it/s]
+[2022-11-18 10:08:16] - comment: deberta-v3-base, add 2021data(all) raw_pred, PL=ems004data
+[2022-11-18 10:08:16] - max_len: 2048
+[2022-11-18 10:08:16] - ========== fold: 0 training ==========
+[2022-11-18 10:08:17] - DebertaV2Config {
+  "_name_or_path": "microsoft/deberta-v3-base",
+  "attention_dropout": 0.0,
+  "attention_probs_dropout_prob": 0.0,
+  "hidden_act": "gelu",
+  "hidden_dropout": 0.0,
+  "hidden_dropout_prob": 0.0,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-07,
+  "max_position_embeddings": 512,
+  "max_relative_positions": -1,
+  "model_type": "deberta-v2",
+  "norm_rel_ebd": "layer_norm",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_hidden_states": true,
+  "pad_token_id": 0,
+  "pooler_dropout": 0,
+  "pooler_hidden_act": "gelu",
+  "pooler_hidden_size": 768,
+  "pos_att_type": [
+    "p2c",
+    "c2p"
+  ],
+  "position_biased_input": false,
+  "position_buckets": 256,
+  "relative_attention": true,
+  "share_att_key": true,
+  "transformers_version": "4.21.1",
+  "type_vocab_size": 0,
+  "vocab_size": 128100
+}
+Some weights of the model checkpoint at microsoft/deberta-v3-base were not used when initializing DebertaV2Model: ['lm_predictions.lm_head.LayerNorm.weight', 'lm_predictions.lm_head.LayerNorm.bias', 'mask_predictions.dense.bias', 'mask_predictions.classifier.bias', 'mask_predictions.classifier.weight', 'lm_predictions.lm_head.dense.bias', 'mask_predictions.LayerNorm.weight', 'mask_predictions.dense.weight', 'lm_predictions.lm_head.bias', 'mask_predictions.LayerNorm.bias', 'lm_predictions.lm_head.dense.weight']
+- This IS expected if you are initializing DebertaV2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Reinitializing Last 1 Layers ...
+Done.!
+Epoch: [1][0/952] Elapsed 0m 2s (remain 44m 45s) Loss: 3.1221(3.1221) Grad: inf  LR: 0.00002994
+Epoch: [1][100/952] Elapsed 2m 4s (remain 17m 27s) Loss: 2.7049(2.6460) Grad: nan  LR: 0.00002994
+Epoch: [1][200/952] Elapsed 4m 13s (remain 15m 48s) Loss: 2.8056(2.6360) Grad: nan  LR: 0.00002994
+Epoch: [1][300/952] Elapsed 6m 9s (remain 13m 19s) Loss: 2.6080(2.6314) Grad: nan  LR: 0.00002994
+Epoch: [1][400/952] Elapsed 8m 10s (remain 11m 13s) Loss: 2.7164(2.6340) Grad: nan  LR: 0.00002994
+Epoch: [1][500/952] Elapsed 10m 10s (remain 9m 9s) Loss: 2.5183(2.6346) Grad: nan  LR: 0.00002994
+Epoch: [1][600/952] Elapsed 12m 12s (remain 7m 8s) Loss: 2.5246(2.6331) Grad: nan  LR: 0.00002994
+Epoch: [1][700/952] Elapsed 14m 13s (remain 5m 5s) Loss: 2.7986(2.6326) Grad: nan  LR: 0.00002994
+Epoch: [1][800/952] Elapsed 16m 17s (remain 3m 4s) Loss: 2.6035(2.6303) Grad: nan  LR: 0.00002994
+Epoch: [1][900/952] Elapsed 18m 14s (remain 1m 1s) Loss: 2.6587(2.6284) Grad: nan  LR: 0.00002994
+Epoch: [1][951/952] Elapsed 19m 14s (remain 0m 0s) Loss: 2.5018(2.6281) Grad: nan  LR: 0.00000057
+EVAL: [0/25] Elapsed 0m 1s (remain 0m 32s) Loss: 1.9917(1.9917)
+[2022-11-18 10:28:16] - Epoch 1 - avg_train_loss: 2.6281  avg_val_loss: 2.1515  time: 1196s
+[2022-11-18 10:28:16] - Epoch 1 - Score: 2.7353  Scores: [2.7773554799520763, 2.8410557971289876, 3.3330193115594566, 2.1751095978025923, 2.7690802602995297, 2.516441413332672]
+[2022-11-18 10:28:16] - Epoch 1 - Save Best Score: 2.7353 Model
+EVAL: [24/25] Elapsed 0m 41s (remain 0m 0s) Loss: 2.1118(2.1515)
+Epoch: [2][0/952] Elapsed 0m 2s (remain 32m 23s) Loss: 2.7341(2.7341) Grad: nan  LR: 0.00000069
+Epoch: [2][100/952] Elapsed 1m 51s (remain 15m 42s) Loss: 2.4203(2.6246) Grad: nan  LR: 0.00000069
+Epoch: [2][200/952] Elapsed 3m 53s (remain 14m 31s) Loss: 2.8662(2.6298) Grad: nan  LR: 0.00000069
+Epoch: [2][300/952] Elapsed 5m 53s (remain 12m 43s) Loss: 2.6431(2.6264) Grad: nan  LR: 0.00000069
+Epoch: [2][400/952] Elapsed 7m 46s (remain 10m 40s) Loss: 2.9406(2.6324) Grad: nan  LR: 0.00000069
+Traceback (most recent call last):
+  File "/notebooks/code/exp058.py", line 824, in <module>
+    main()
+  File "/notebooks/code/exp058.py", line 762, in main
+    _oof_df = train_loop(train2, train, fold) # ★★★
+  File "/notebooks/code/exp058.py", line 657, in train_loop
+    avg_loss = train_fn(fold, train_loader, model, criterion, optimizer, epoch, scheduler, device)
+  File "/notebooks/code/exp058.py", line 481, in train_fn
+    y_preds = model(inputs)
+  File "/usr/local/lib/python3.9/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/notebooks/code/exp058.py", line 408, in forward
+    feature = self.feature(inputs)
+  File "/notebooks/code/exp058.py", line 393, in feature
+    outputs = self.model(**inputs)
+  File "/usr/local/lib/python3.9/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 1053, in forward
+    encoder_outputs = self.encoder(
+  File "/usr/local/lib/python3.9/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 493, in forward
+    output_states = torch.utils.checkpoint.checkpoint(
+  File "/usr/local/lib/python3.9/dist-packages/torch/utils/checkpoint.py", line 235, in checkpoint
+    return CheckpointFunction.apply(function, preserve, *args)
+  File "/usr/local/lib/python3.9/dist-packages/torch/utils/checkpoint.py", line 96, in forward
+    outputs = run_function(*args)
+  File "/usr/local/lib/python3.9/dist-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 489, in custom_forward
+    return module(*inputs, output_attentions)
+  File "/usr/local/lib/python3.9/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 346, in forward
+    attention_output = self.attention(
+  File "/usr/local/lib/python3.9/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 277, in forward
+    self_output = self.self(
+  File "/usr/local/lib/python3.9/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 702, in forward
+    rel_att = self.disentangled_attention_bias(
+  File "/usr/local/lib/python3.9/dist-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 746, in disentangled_attention_bias
+    relative_pos = relative_pos.long().to(query_layer.device)
+KeyboardInterrupt

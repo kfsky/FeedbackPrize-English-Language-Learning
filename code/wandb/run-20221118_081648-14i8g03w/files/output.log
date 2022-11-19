@@ -1,0 +1,81 @@
+Downloading tokenizer_config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 52.0/52.0 [00:00<00:00, 35.5kB/s]
+Downloading config.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 579/579 [00:00<00:00, 591kB/s]
+Downloading spm.model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.35M/2.35M [00:00<00:00, 27.8MB/s]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3911/3911 [00:04<00:00, 976.07it/s]
+[2022-11-18 08:16:56] - comment: deberta-v3-base, add 2021data(all) raw_pred, PL=ems004data
+[2022-11-18 08:16:56] - max_len: 2048
+[2022-11-18 08:16:56] - ========== fold: 0 training ==========
+[2022-11-18 08:16:56] - DebertaV2Config {
+  "_name_or_path": "microsoft/deberta-v3-base",
+  "attention_dropout": 0.0,
+  "attention_probs_dropout_prob": 0.0,
+  "hidden_act": "gelu",
+  "hidden_dropout": 0.0,
+  "hidden_dropout_prob": 0.0,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-07,
+  "max_position_embeddings": 512,
+  "max_relative_positions": -1,
+  "model_type": "deberta-v2",
+  "norm_rel_ebd": "layer_norm",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_hidden_states": true,
+  "pad_token_id": 0,
+  "pooler_dropout": 0,
+  "pooler_hidden_act": "gelu",
+  "pooler_hidden_size": 768,
+  "pos_att_type": [
+    "p2c",
+    "c2p"
+  ],
+  "position_biased_input": false,
+  "position_buckets": 256,
+  "relative_attention": true,
+  "share_att_key": true,
+  "transformers_version": "4.21.1",
+  "type_vocab_size": 0,
+  "vocab_size": 128100
+}
+
+
+
+
+Downloading pytorch_model.bin: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 354M/354M [00:08<00:00, 42.8MB/s]
+Some weights of the model checkpoint at microsoft/deberta-v3-base were not used when initializing DebertaV2Model: ['mask_predictions.dense.bias', 'mask_predictions.classifier.weight', 'lm_predictions.lm_head.LayerNorm.weight', 'lm_predictions.lm_head.bias', 'mask_predictions.classifier.bias', 'mask_predictions.LayerNorm.weight', 'lm_predictions.lm_head.LayerNorm.bias', 'lm_predictions.lm_head.dense.weight', 'lm_predictions.lm_head.dense.bias', 'mask_predictions.LayerNorm.bias', 'mask_predictions.dense.weight']
+- This IS expected if you are initializing DebertaV2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Reinitializing Last 1 Layers ...
+Done.!
+Epoch: [1][0/487] Elapsed 0m 3s (remain 29m 52s) Loss: 2.8779(2.8779) Grad: inf  LR: 0.00002994
+Traceback (most recent call last):
+  File "/notebooks/code/exp058.py", line 823, in <module>
+    main()
+  File "/notebooks/code/exp058.py", line 761, in main
+    _oof_df = train_loop(train2, train, fold) # ★★★
+  File "/notebooks/code/exp058.py", line 657, in train_loop
+    avg_loss = train_fn(fold, train_loader, model, criterion, optimizer, epoch, scheduler, device)
+  File "/notebooks/code/exp058.py", line 486, in train_fn
+    scaler.scale(loss).backward()
+  File "/usr/local/lib/python3.9/dist-packages/torch/_tensor.py", line 396, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/usr/local/lib/python3.9/dist-packages/torch/autograd/__init__.py", line 173, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  File "/usr/local/lib/python3.9/dist-packages/torch/autograd/function.py", line 253, in apply
+    return user_fn(self, *args)
+  File "/usr/local/lib/python3.9/dist-packages/torch/utils/checkpoint.py", line 146, in backward
+    torch.autograd.backward(outputs_with_grad, args_with_grad)
+  File "/usr/local/lib/python3.9/dist-packages/torch/autograd/__init__.py", line 173, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  File "/usr/local/lib/python3.9/dist-packages/torch/autograd/function.py", line 253, in apply
+    return user_fn(self, *args)
+  File "/usr/local/lib/python3.9/dist-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 122, in backward
+    inputGrad = softmax_backward_data(self, grad_output, output, self.dim, output)
+  File "/usr/local/lib/python3.9/dist-packages/transformers/pytorch_utils.py", line 51, in softmax_backward_data
+    return _softmax_backward_data(grad_output, output, parent.dim, self.dtype)
+RuntimeError: CUDA out of memory. Tried to allocate 3.63 GiB (GPU 0; 23.69 GiB total capacity; 13.96 GiB already allocated; 1.47 GiB free; 21.00 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

@@ -1,0 +1,27 @@
+2022-11-18 10:44:06,474 INFO    MainThread:1438 [wandb_setup.py:_flush():68] Configure stats pid to 1438
+2022-11-18 10:44:06,476 INFO    MainThread:1438 [wandb_setup.py:_flush():68] Loading settings from /root/.config/wandb/settings
+2022-11-18 10:44:06,478 INFO    MainThread:1438 [wandb_setup.py:_flush():68] Loading settings from /notebooks/code/wandb/settings
+2022-11-18 10:44:06,479 INFO    MainThread:1438 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-11-18 10:44:06,480 INFO    MainThread:1438 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'code/exp058.py', 'program': '/notebooks/code/exp058.py'}
+2022-11-18 10:44:06,481 INFO    MainThread:1438 [wandb_setup.py:_flush():68] Applying login settings: {'api_key': '***REDACTED***'}
+2022-11-18 10:44:06,482 INFO    MainThread:1438 [wandb_setup.py:_flush():68] Applying login settings: {'api_key': '***REDACTED***'}
+2022-11-18 10:44:06,483 INFO    MainThread:1438 [wandb_init.py:_log_setup():476] Logging user logs to /notebooks/code/wandb/run-20221118_104406-2lg2w3h7/logs/debug.log
+2022-11-18 10:44:06,485 INFO    MainThread:1438 [wandb_init.py:_log_setup():477] Logging internal logs to /notebooks/code/wandb/run-20221118_104406-2lg2w3h7/logs/debug-internal.log
+2022-11-18 10:44:06,486 INFO    MainThread:1438 [wandb_init.py:init():516] calling init triggers
+2022-11-18 10:44:06,487 INFO    MainThread:1438 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {'T_max': 50, '_wandb_kernel': 'kfksy', 'apex': True, 'batch_scheduler': True, 'batch_size': 16, 'betas': (0.9, 0.999), 'competition': 'FB3', 'debug': False, 'decoder_lr': 3e-05, 'encoder_lr': 3e-05, 'epochs': 5, 'eps': 1e-07, 'explain': 'deberta-v3-base, add 2021data(all) raw_pred, PL=ems004data', 'fc_dropout': 0.2, 'gradient_accumulation_steps': 1, 'gradient_checkpointing': True, 'max_grad_norm': 1000, 'max_len': 2048, 'min_lr': 1e-07, 'model': 'microsoft/deberta-v3-base', 'n_fold': 5, 'name': 'exp052', 'notion_api': 'secret_mDRpQpcMtlPJiaLh4jG7MHDzJK6iAAjQixkEwVwK3yC', 'num_cycle': 0.5, 'num_warmup_steps': 100, 'num_workers': 4, 'print_freq': 100, 'reinit_layers': 1, 'scheduler': 'CosineAnnealingLR', 'seed': 42, 'send_notion': True, 'send_slack': False, 'target_cols': ['cohesion', 'syntax', 'vocabulary', 'phraseology', 'grammar', 'conventions'], 'train': True, 'trn_fold': [0, 1, 2, 3, 4], 'upload_from_colab': True, 'wandb': True, 'wandb_key': '7d32464324b52091573d018d1166ff4c35d3897b', 'weight_decay': 0.01}
+2022-11-18 10:44:06,489 INFO    MainThread:1438 [wandb_init.py:init():569] starting backend
+2022-11-18 10:44:06,490 INFO    MainThread:1438 [wandb_init.py:init():573] setting up manager
+2022-11-18 10:44:06,493 INFO    MainThread:1438 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-11-18 10:44:06,496 INFO    MainThread:1438 [wandb_init.py:init():580] backend started and connected
+2022-11-18 10:44:06,501 INFO    MainThread:1438 [wandb_init.py:init():658] updated telemetry
+2022-11-18 10:44:06,522 INFO    MainThread:1438 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2022-11-18 10:44:06,702 INFO    MainThread:1438 [wandb_run.py:_on_init():2000] communicating current version
+2022-11-18 10:44:06,931 INFO    MainThread:1438 [wandb_run.py:_on_init():2004] got version response 
+2022-11-18 10:44:06,935 INFO    MainThread:1438 [wandb_init.py:init():728] starting run threads in backend
+2022-11-18 10:44:07,077 INFO    MainThread:1438 [wandb_run.py:_console_start():1980] atexit reg
+2022-11-18 10:44:07,079 INFO    MainThread:1438 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2022-11-18 10:44:07,081 INFO    MainThread:1438 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2022-11-18 10:44:07,084 INFO    MainThread:1438 [wandb_run.py:_redirect():1925] Redirects installed.
+2022-11-18 10:44:07,085 INFO    MainThread:1438 [wandb_init.py:init():765] run started, returning control to user process
+2022-11-18 13:14:22,984 WARNING MsgRouterThr:1438 [router.py:message_loop():77] message_loop has been closed

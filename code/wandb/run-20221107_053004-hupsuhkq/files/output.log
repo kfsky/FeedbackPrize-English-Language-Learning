@@ -1,0 +1,22 @@
+Downloading tokenizer_config.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 52.0/52.0 [00:00<00:00, 55.0kB/s]
+Downloading config.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 633/633 [00:00<00:00, 647kB/s]
+Downloading spm.model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.33M/2.33M [00:00<00:00, 3.59MB/s]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+  0%|                                                                                                                                                                                       | 0/3911 [00:00<?, ?it/s]Token indices sequence length is longer than the specified maximum sequence length for this model (560 > 512). Running this sequence through the model will result in indexing errors
+
+ 53%|█████████████████████████████████████████████████████████████████████████████████████████▉                                                                                 | 2056/3911 [00:02<00:01, 936.58it/s]
+Traceback (most recent call last):
+  File "/notebooks/code/exp049.py", line 761, in <module>
+    main()
+  File "/notebooks/code/exp049.py", line 689, in main
+    length = len(tokenizer(text, add_special_tokens=False)['input_ids'])
+  File "/usr/local/lib/python3.9/dist-packages/transformers/tokenization_utils_base.py", line 2537, in __call__
+    return self.encode_plus(
+  File "/usr/local/lib/python3.9/dist-packages/transformers/tokenization_utils_base.py", line 2610, in encode_plus
+    return self._encode_plus(
+  File "/usr/local/lib/python3.9/dist-packages/transformers/tokenization_utils_fast.py", line 499, in _encode_plus
+    batched_output = self._batch_encode_plus(
+  File "/usr/local/lib/python3.9/dist-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+KeyboardInterrupt

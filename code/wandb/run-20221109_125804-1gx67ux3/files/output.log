@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/transformers/utils/hub.py", line 704, in get_file_from_repo
+    resolved_file = cached_path(
+  File "/usr/local/lib/python3.9/dist-packages/transformers/utils/hub.py", line 284, in cached_path
+    output_path = get_from_cache(
+  File "/usr/local/lib/python3.9/dist-packages/transformers/utils/hub.py", line 502, in get_from_cache
+    _raise_for_status(r)
+  File "/usr/local/lib/python3.9/dist-packages/transformers/utils/hub.py", line 417, in _raise_for_status
+    raise RepositoryNotFoundError(
+transformers.utils.hub.RepositoryNotFoundError: 401 Client Error: Repository not found for url: https://huggingface.co/funnel-transformer/base/resolve/main/tokenizer_config.json. If the repo is private, make sure you are authenticated.
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/notebooks/code/exp050.py", line 788, in <module>
+    main()
+  File "/notebooks/code/exp050.py", line 707, in main
+    tokenizer = AutoTokenizer.from_pretrained(CFG.model)
+  File "/usr/local/lib/python3.9/dist-packages/transformers/models/auto/tokenization_auto.py", line 534, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/transformers/models/auto/tokenization_auto.py", line 392, in get_tokenizer_config
+    resolved_config_file = get_file_from_repo(
+  File "/usr/local/lib/python3.9/dist-packages/transformers/utils/hub.py", line 715, in get_file_from_repo
+    raise EnvironmentError(
+OSError: funnel-transformer/base is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo with `use_auth_token` or log in with `huggingface-cli login` and pass `use_auth_token=True`.

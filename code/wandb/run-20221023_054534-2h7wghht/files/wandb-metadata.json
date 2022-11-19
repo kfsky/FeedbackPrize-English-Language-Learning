@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.4.0-122-generic-x86_64-with-glibc2.31",
+    "python": "3.9.13",
+    "heartbeatAt": "2022-10-23T05:45:35.021843",
+    "startedAt": "2022-10-23T05:45:34.544980",
+    "docker": null,
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/notebooks/code/exp025.py",
+    "codePath": "code/exp025.py",
+    "git": {
+        "remote": "https://github.com/gradient-ai/PyTorch.git",
+        "commit": "d9434a603823e2d481bc350cc41f34fc536d8185"
+    },
+    "email": null,
+    "root": "/notebooks",
+    "host": "n79oglx72z",
+    "username": "root",
+    "executable": "/usr/local/bin/python"
+}

@@ -1,0 +1,107 @@
+Downloading tokenizer_config.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 52.0/52.0 [00:00<00:00, 74.3kB/s]
+Downloading config.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 633/633 [00:00<00:00, 1.04MB/s]
+Downloading spm.model: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.33M/2.33M [00:00<00:00, 81.8MB/s]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+  0%|                                                                                                                                                                                                                                              | 0/3911 [00:00<?, ?it/s]Token indices sequence length is longer than the specified maximum sequence length for this model (560 > 512). Running this sequence through the model will result in indexing errors
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3911/3911 [00:04<00:00, 817.98it/s]
+[2022-11-07 12:26:26] - comment: deberta-v2-xlarge exp039 10fold
+[2022-11-07 12:26:26] - max_len: 2048
+[2022-11-07 12:26:26] - ========== fold: 0 training ==========
+[2022-11-07 12:26:26] - DebertaV2Config {
+  "_name_or_path": "microsoft/deberta-v2-xlarge",
+  "attention_dropout": 0.0,
+  "attention_head_size": 64,
+  "attention_probs_dropout_prob": 0.0,
+  "conv_act": "gelu",
+  "conv_kernel_size": 3,
+  "hidden_act": "gelu",
+  "hidden_dropout": 0.0,
+  "hidden_dropout_prob": 0.0,
+  "hidden_size": 1536,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_norm_eps": 1e-07,
+  "max_position_embeddings": 512,
+  "max_relative_positions": -1,
+  "model_type": "deberta-v2",
+  "norm_rel_ebd": "layer_norm",
+  "num_attention_heads": 24,
+  "num_hidden_layers": 24,
+  "output_hidden_states": true,
+  "pad_token_id": 0,
+  "pooler_dropout": 0,
+  "pooler_hidden_act": "gelu",
+  "pooler_hidden_size": 1536,
+  "pos_att_type": [
+    "p2c",
+    "c2p"
+  ],
+  "position_biased_input": false,
+  "position_buckets": 256,
+  "relative_attention": true,
+  "share_att_key": true,
+  "transformers_version": "4.21.1",
+  "type_vocab_size": 0,
+  "vocab_size": 128100
+}
+
+
+
+
+
+
+
+
+
+
+
+Downloading pytorch_model.bin: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1.65G/1.65G [00:22<00:00, 78.0MB/s]
+Some weights of the model checkpoint at microsoft/deberta-v2-xlarge were not used when initializing DebertaV2Model: ['lm_predictions.lm_head.LayerNorm.weight', 'lm_predictions.lm_head.LayerNorm.bias', 'lm_predictions.lm_head.dense.weight', 'lm_predictions.lm_head.bias', 'lm_predictions.lm_head.dense.bias']
+- This IS expected if you are initializing DebertaV2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Reinitializing Last 1 Layers ...
+Done.!
+Epoch: [1][0/110] Elapsed 0m 7s (remain 14m 14s) Loss: 3.2253(3.2253) Grad: inf  LR: 0.00000200
+Epoch: [1][100/110] Elapsed 11m 6s (remain 0m 59s) Loss: 0.1094(0.7053) Grad: 23864.5996  LR: 0.00000200
+Epoch: [1][109/110] Elapsed 12m 4s (remain 0m 0s) Loss: 0.1316(0.6578) Grad: 52139.2227  LR: 0.00000179
+EVAL: [0/7] Elapsed 0m 7s (remain 0m 47s) Loss: 0.1289(0.1289)
+Traceback (most recent call last):
+  File "/notebooks/code/exp049.py", line 761, in <module>
+    main()
+  File "/notebooks/code/exp049.py", line 699, in main
+    _oof_df = train_loop(train, fold)
+  File "/notebooks/code/exp049.py", line 613, in train_loop
+    avg_val_loss, predictions = valid_fn(valid_loader, model, criterion, device)
+  File "/notebooks/code/exp049.py", line 505, in valid_fn
+    y_preds = model(inputs)
+  File "/usr/local/lib/python3.9/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/notebooks/code/exp049.py", line 388, in forward
+    feature = self.feature(inputs)
+  File "/notebooks/code/exp049.py", line 373, in feature
+    outputs = self.model(**inputs)
+  File "/usr/local/lib/python3.9/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 1053, in forward
+    encoder_outputs = self.encoder(
+  File "/usr/local/lib/python3.9/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 502, in forward
+    output_states = layer_module(
+  File "/usr/local/lib/python3.9/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 346, in forward
+    attention_output = self.attention(
+  File "/usr/local/lib/python3.9/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 277, in forward
+    self_output = self.self(
+  File "/usr/local/lib/python3.9/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 702, in forward
+    rel_att = self.disentangled_attention_bias(
+  File "/usr/local/lib/python3.9/dist-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 804, in disentangled_attention_bias
+    score += p2c_att / scale
+RuntimeError: CUDA out of memory. Tried to allocate 11.52 GiB (GPU 0; 79.17 GiB total capacity; 62.42 GiB already allocated; 3.34 GiB free; 73.86 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

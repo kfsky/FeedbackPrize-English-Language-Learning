@@ -1,0 +1,7 @@
+iterative-stratification==0.1.7
+kaggle
+sentencepiece
+slackweb
+transformers==4.21.1
+tokenizers==0.12.1
+wandb

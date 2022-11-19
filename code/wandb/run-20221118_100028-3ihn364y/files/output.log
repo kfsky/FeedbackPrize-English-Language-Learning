@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/notebooks/code/exp058.py", line 824, in <module>
+    main()
+  File "/notebooks/code/exp058.py", line 728, in main
+    data_2021.loc[val_index2, 'fold'] = int(n)
+  File "/usr/local/lib/python3.9/dist-packages/pandas/core/indexing.py", line 712, in __setitem__
+    indexer = self._get_setitem_indexer(key)
+  File "/usr/local/lib/python3.9/dist-packages/pandas/core/indexing.py", line 661, in _get_setitem_indexer
+    return self._convert_tuple(key)
+  File "/usr/local/lib/python3.9/dist-packages/pandas/core/indexing.py", line 799, in _convert_tuple
+    idx = self._convert_to_indexer(k, axis=i)
+  File "/usr/local/lib/python3.9/dist-packages/pandas/core/indexing.py", line 1291, in _convert_to_indexer
+    return self._get_listlike_indexer(key, axis)[1]
+  File "/usr/local/lib/python3.9/dist-packages/pandas/core/indexing.py", line 1327, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+  File "/usr/local/lib/python3.9/dist-packages/pandas/core/indexes/base.py", line 5782, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "/usr/local/lib/python3.9/dist-packages/pandas/core/indexes/base.py", line 5845, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: '[252, 266, 655, 1040, 1372, 1498, 1603, 2215, 2306, 2365, 2409, 2531, 2607, 3127, 3194, 3442, 3591, 4065, 4195, 4225, 4369, 4448, 4509, 4544, 4738, 4998, 5070, 5414, 5460, 5527, 5797, 5829, 6347, 6362, 6375, 6553, 6566, 6822, 7047, 7305, 7365, 7473, 7941, 8167, 8230, 8235, 8374, 8393, 8471, 8597, 8605, 8681, 8809, 8833, 9855, 9899, 10912, 10915, 10940, 10986, 11044, 11195, 11375, 11477, 11601, 11761, 11893, 11980, 11983, 12113, 12264, 12437, 12463, 12882, 13170, 13320, 13405, 13639, 13926, 14086, 14119, 14238, 14239, 14304, 14751, 14766, 14959, 14981] not in index'
